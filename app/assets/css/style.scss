@@ -1,4 +1,6 @@
 @import "normalize.css";
-@import "./base/_global.scss"; 
-@import "./moduels/_large-hero.scss"; 
- 
+@import "./base/_variables.scss";
+@import "./base/_mixins.pcss";
+@import "./base/_global.scss";
+@import "./moduels/_btn.scss"; 
+@import "./moduels/_large-hero.scss";

@@ -1,0 +1,19 @@
+.btn {
+  background-color: $colorMainBlue;
+  display: inline-block;
+  font-size: 1.2rem;
+  color: snow;
+  padding: .75rem 1.2rem;
+  text-decoration: none;
+  &--gold {
+    background-color: $colorGold;
+  }
+  &--large {
+    font-size: 1rem;
+    padding: .8rem 1rem;
+    @mixin atSmall {
+      padding:1rem 1.5rem;
+      font-size: 1.6rem;
+    }
+  }
+}

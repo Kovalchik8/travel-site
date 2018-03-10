@@ -80,6 +80,12 @@ a {
   &--gutter > div {
     padding-right: 50px;
   }
+  &--gutter-large {
+    margin-right: -100px;
+  }
+  &--gutter-large > div {
+    padding-right: 100px;
+  }
   @mixin clearfix{};
 
   @mixin atMedium {
@@ -92,19 +98,27 @@ a {
       width: 66.6%;
     }
   }
+  @mixin atMedium {
+    &__md-6 {
+    float: left;
+    width: 50%;
+    }
+  }
   &--no-mb-until-medium {
     margin-bottom: 1rem;
     @mixin atSmall {
       margin-bottom: 0;
     }
   }
+  
 }
 
 
 .generic-content-container {
   p {
     line-height: 1.6;
-    margin: 20px 0;
+    margin: 0 0 20px 0;
+    font-weight: 300;
     @mixin atSmall {
       font-size: 1.15rem;
     }
@@ -112,5 +126,54 @@ a {
   p a {
     font-weight: 700;
   }
- 
+}
+#features {
+  color: snow;
+}
+.section-title {
+  text-align: center;
+  font-size: 2.75rem;
+  font-weight: 300;
+  &__icon {
+    display: block;
+    width: 55px;
+    height: 55px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    @mixin atSmall {
+      display: inline-block;
+      margin-right: 15px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.feature-item {
+  @mixin atSmall {
+    padding-left: 85px;
+  }
+  position: relative;
+  margin-bottom: 2.5rem;
+  &__icon {
+    width: 55px;
+    height: 55px;
+    display: block;
+    margin: 0 auto;
+    @mixin atSmall {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  &__title {
+    @mixin atSmall {
+      font-size: 1.375rem;
+      text-align: left;
+    }
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: .5rem;
+  }
 }

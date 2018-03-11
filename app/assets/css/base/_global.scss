@@ -18,6 +18,12 @@ a {
 .mb50 {
   margin-bottom: 50px;
 }
+.pb70 {
+  padding-bottom: 70px;
+}
+.mt0{
+  margin-top: 0;
+}
 
 .page-section {
   padding: 1.1rem 0;
@@ -27,9 +33,31 @@ a {
   @mixin atSmall {
     padding: 4rem 0;
   }
-}
+  &--testimonials {
+    background-color: rgba(99, 99, 240, 0.3);
+    @mixin atMedium {
+      background-image: url('../../assets/images/testimonials-bg.jpg'); 
+      background-position: center top;
+      background-size: cover;
+    }
+  }
+  &--no-pb-until-md {
+    padding-bottom: 0;
+    @mixin atMedium {
+      padding-bottom: 4rem;
+    }
+  }
+} 
 
 .wrapper {
+  &--no-plr-until-md {
+    padding-left: 0;
+    padding-right: 0;
+    @mixin atMedium {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
   overflow: hidden;
   padding-left: 16px;
   padding-right: 16px;
@@ -37,7 +65,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   &--medium {
-    max-width: 976px;
+    max-width: 976px;  
   }
   .wrapper {
     padding: 0;
@@ -110,6 +138,15 @@ a {
       margin-bottom: 0;
     }
   }
+
+  &--flex-md {
+    @mixin atMedium {
+      display: flex;
+      & > div {
+        display: flex;
+      } 
+    }
+  }
   
 }
 
@@ -119,6 +156,7 @@ a {
     line-height: 1.6;
     margin: 0 0 20px 0;
     font-weight: 300;
+    text-align: left;
     @mixin atSmall {
       font-size: 1.15rem;
     }
@@ -130,12 +168,14 @@ a {
 #features {
   color: snow;
 }
-.section-title {
+.section-title { 
   text-align: center;
-  font-size: 2.75rem;
+  font-size: 3rem;
   font-weight: 300;
   &__icon {
     display: block;
+    position: relative;
+    top: 8px;
     width: 55px;
     height: 55px;
     margin-right: auto;
@@ -146,6 +186,9 @@ a {
       margin-right: 15px;
       margin-bottom: 0;
     }
+  }
+  &--blue {
+    color: $colorMainBlue;
   }
 }
 
@@ -175,5 +218,37 @@ a {
     font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: .5rem;
+  }
+}
+
+.testimonial {
+  @mixin atMedium {
+    margin-bottom: 0;
+  }
+  &--last {
+    margin-bottom: 0;
+  }
+  margin-bottom: 86px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0 15px 1px 15px;
+  &__photo {
+    height: 140px;
+    width: 140px;
+    display: inline-block;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    margin-bottom: -70px;
+    border: 6px solid rgba(255, 255, 255, 0.7);
+  }
+  &__title {
+    font-size: 1.2rem;
+    margin: 0;
+    color: $colorMainBlue;
+  }
+  &__subtitle {
+    margin: .25rem 0 1rem 0;
+    font-size: .9rem;
+    color: $colorGold;
   }
 }

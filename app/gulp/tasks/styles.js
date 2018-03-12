@@ -18,7 +18,7 @@ gulp.task('css', function () {
       this.emit('end');
     })
     .pipe(concat('style.css'))
-    // .pipe(cssnano({zindex: false}))
+    .pipe(cssnano({zindex: false}))
     .pipe(gulp.dest('./app/temp/css/'));
 
 });

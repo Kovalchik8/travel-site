@@ -248,3 +248,19 @@ a {
     color: $colorGold;
   }
 }
+
+.site-footer {
+  background-color: $colorMainBlue;
+  color: snow;
+  padding: .5rem 0;
+  text-align: center;
+  &__text {
+    font-weight: 200;
+    display: block;
+    margin-bottom: .8rem;
+    @mixin atMedium {
+      display: inline;
+      margin: 0 15px 0 0;
+    }
+  }
+}

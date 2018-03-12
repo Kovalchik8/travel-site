@@ -9,7 +9,7 @@ var config = {
     css: {
       render: {
         css: {
-          template : 'app/templates/sprite.css'
+          template : './app/gulp/templates/sprite.css'
         }
       }
     }

@@ -8,4 +8,8 @@ gulp.task('watch', function () {
     gulp.start('css');
   });
 
+  watch('./app/assets/scripts/**/*.js', function () {
+    gulp.start('scripts');
+  });
+
 });

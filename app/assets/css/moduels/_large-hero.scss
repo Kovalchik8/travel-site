@@ -19,7 +19,7 @@
     font-size: 2rem;
     color: $colorMainBlue;
     margin: 0;
-    @mixin atSmall {
+    @mixin atSmall { 
       font-size: 4.8rem;
     }
   }

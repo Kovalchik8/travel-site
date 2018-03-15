@@ -270,11 +270,18 @@ a {
   position: absolute;
   width: 100%;
   z-index: 2;
+  transition: background-color .3s ease-out;
   @mixin atMedium {
     background-color: rgba(47, 85, 114, 0.4);
   }
+  &--is-expended {
+    background-color: #2f557291;
+  }
   &__btn-container {
-    float: right;
+    @mixin atMedium {
+      float: right;
+    }
+
   }
   &__logo {
     position: absolute;
@@ -290,28 +297,67 @@ a {
     }
   }
   &__menu-content {
-    display: none;
+    transform: scale(1.2);
+    text-align: center;
+    opacity: 0;
+    transition: all .3s ease-out;
+    padding-top: 100px;
+    z-index: -10;
+    position: relative;
     @mixin atMedium {
-      display: block;
+      transform: scale(1);
+      padding-top: 0;
+      opacity: 1;
+      z-index: 1;
+    }
+    &--visible {
+      transform: scale(1);
+      opacity: 1;
+      z-index: 1;
     }
   }
   &__btn-toggle {
+    cursor: pointer;
+    z-index: 10;
     height: 30px;
-    width: 30px;
+    width: 35px;
     position: absolute;
     right: 20px;
     top: 10px;
-    background-color: rgba(255, 250, 250, 0.568);
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     @mixin atMedium {
       display: none;
+    }
+    span {
+      display: block;
+      width: 100%;
+      height: 5px;
+      background-color: rgba(255, 250, 250, 0.8);
+      transition: all .3s ease-out;
+    }
+    &--x {
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(1) {
+        transform: translateY(13px) rotate(45deg);
+        transition: .3s ease-out;
+      }
+      span:nth-child(3) {
+        transform: translateY(-12px) rotate(-45deg);
+        transition: .3s ease-out;
+      }
     }
   }
 }
 
 .primary-nav {
   &--float-right{
-    float: right;
+    @mixin atMedium {
+      float: right;
+    }
   }
   ul {
     margin: 0;
@@ -319,10 +365,17 @@ a {
     @mixin clearfix{};
     li {
       list-style: none;
-      float: left;
+      display: inline-block;
+      @mixin atMedium {
+        display: block;
+        float: left;
+      }
       padding-right: 10px;
       &:last-child {
-        padding-right: 20px;
+        padding-right: 0;
+        @mixin atMedium {
+          padding-right: 20px;
+        }
       }
       a {
         display: block;

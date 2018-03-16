@@ -273,6 +273,10 @@ a {
   transition: background-color .3s ease-out;
   @mixin atMedium {
     background-color: rgba(47, 85, 114, 0.4);
+    position: fixed;
+    &--dark-bg {
+      background-color: rgba(31, 57, 77, 0.9);
+    }
   }
   &--is-expended {
     background-color: #2f557291;
@@ -291,9 +295,13 @@ a {
     left: 50%;
     transform: translateX(-50%) scale(.8);
     transform-origin: 50% 0;
+    transition: all .3s;
     @mixin atMedium {
       left: auto;
       transform: translateX(0);
+      &--shrinked {
+        transform: scale(.57);
+      }
     }
   }
   &__menu-content {
@@ -383,6 +391,9 @@ a {
         color: snow;
         font-weight: 300;
         padding: 12px 0;
+        &.is-inview {
+          color: #11dcffbf;
+        }
       }
     }
   }

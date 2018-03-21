@@ -5,7 +5,6 @@ var gulp = require('gulp'),
   nested = require('postcss-nested'),
   concat = require('gulp-concat'),
   importCss = require('postcss-import'),
-  cssnano = require('gulp-cssnano'),
   mixins = require('postcss-mixins');
 
 
@@ -18,7 +17,6 @@ gulp.task('css', function () {
       this.emit('end');
     })
     .pipe(concat('style.css'))
-    .pipe(cssnano({zindex: false}))
     .pipe(gulp.dest('./app/temp/css/'));
 
 });

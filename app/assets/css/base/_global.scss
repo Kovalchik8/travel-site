@@ -67,6 +67,9 @@ a {
   &--medium {
     max-width: 976px;  
   }
+  &--small {
+    max-width: 470px;
+  }
   .wrapper {
     padding: 0;
   }
@@ -95,6 +98,7 @@ a {
   }
   &--b-margin-small {
     margin-bottom: .7em;
+    margin-top: 0;
   }
   &--no-t-margin {
     margin-top: 0;

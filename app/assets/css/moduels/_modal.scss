@@ -21,9 +21,13 @@
 
   &__container {
     position: absolute;
-    left: 50%;
+    left: 0;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
+    @mixin atMedium {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   &__close {

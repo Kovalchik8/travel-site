@@ -816,6 +816,7 @@ a {
   z-index: 2;
   -webkit-transition: background-color .3s ease-out;
   transition: background-color .3s ease-out;
+
 }
 
 @media(min-width: 800px) {
@@ -823,6 +824,7 @@ a {
 .site-header {
     background-color: rgba(47, 85, 114, 0.4);
     position: fixed
+
 }
     .site-header--dark-bg {
       background-color: rgba(31, 57, 77, 0.9);
@@ -951,6 +953,14 @@ a {
         -webkit-transition: .3s ease-out;
         transition: .3s ease-out;
       }
+
+.site-header__idea {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    color: snow;
+    font-size: .8rem;
+  }
 
 @media(min-width: 800px) {
 
@@ -1103,6 +1113,14 @@ a {
 .large-hero__img {
     border-bottom: 10px solid  #2f5572;
   }
+
+.large-hero__idea {
+     position: absolute;
+     bottom: 30px;
+     right: 30px;
+     color: rgba(255, 250, 250, 0.8);
+     font-size: .8rem;
+   }
 
 .icon--clear-view-escapes {
   width: 142.4px;

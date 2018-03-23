@@ -363,6 +363,15 @@ a {
       }
     }
   }
+
+  &__idea {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    color: snow;
+    font-size: .8rem;
+  }
+
 }
 
 .primary-nav {
